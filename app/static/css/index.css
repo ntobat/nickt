@@ -1,0 +1,59 @@
+/* --- Body Styles --- */
+body{
+	background: #909090 url("/static/images/bg.png") no-repeat;
+	background-size: cover;
+	font-family: 'Francois One', sans-serif;
+}
+ul{
+	padding: 0;
+	margin: 0;
+}
+a{
+	text-decoration: none;
+	text-transform: none;
+	color: black;
+}
+
+/* --- Nav --- */
+nav ul{
+	text-align: center;
+}
+nav li{
+	display: inline-block;
+	margin: 10px 40px 20px 40px;
+}
+nav img{
+	height: 50px;
+	width: auto;
+}
+.navlink{
+	position: relative;
+	padding: 0 15px 20px 15px;
+	transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+}
+.txt{
+	display: none;
+	position: absolute;
+	top: 20px;
+	width: 100px;
+	left: 50%;
+	margin-left: -50px;
+}
+.navlink:hover{
+	border-bottom: 4px solid black;
+}
+
+.text{
+	display: none;
+	position: absolute;
+	top: 22px;
+	color: white;
+	width: 120px;
+	left: 50%;
+	margin-left: -60px;
+	font-size: 30px;
+	font-family: sans-serif;
+}
+
+

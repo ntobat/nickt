@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	{% if title %}
+	<title>{{ title }} - Nicholas Tobat</title>
+	{% else %}
+	<title>Nicholas Tobat</title>
+	{% endif %}
+	{{ pagedown.html_head() }}
+</head>
+<body>
+	<div>Nicholas Tobat: <a href="/index">Home</a>
+		| {% if g.user.is_authenticated() %}
+			<a href="{{ url_for('logout') }}">Log Out</a>
+			{% elif not g.user.is_authenticated() %}
+			<a href="{{ url_for('login') }}">Log In</a>
+			{% endif %}
+	</div>
+	<hr>
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			<ul>
+			{% for message in messages %}
+				<li>{{ message }}</li>
+			{% endfor %}
+			</ul>
+		{% endif %}
+	{% endwith %}
+	{% block content %}{% endblock %}
+</body>
+</html>
